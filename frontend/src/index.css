@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Prevent white space on overscroll */
+html, body {
+  background-color: #000000; /* Pure black to match app background */
+  overscroll-behavior: none; /* Disable rubber-band/bounce effect */
+  overflow: hidden; /* Prevent body scrolling */
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b; /* Indigo 950 - Dark and subtle */
+  border-radius: 9999px;
+  border: 1px solid #312e81; /* Indigo 900 border */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #312e81; /* Indigo 900 */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e1b4b transparent;
+}
